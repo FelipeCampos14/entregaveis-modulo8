@@ -24,7 +24,6 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            "teste = my_robot_controller.main:main",
             "set_pose_node = my_robot_controller.set_pose:main",
             "go_to_pose_node = my_robot_controller.go_to_pose:main"
         ],
