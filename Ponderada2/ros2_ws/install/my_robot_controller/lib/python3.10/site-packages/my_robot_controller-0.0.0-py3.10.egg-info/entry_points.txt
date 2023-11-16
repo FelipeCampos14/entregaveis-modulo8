@@ -1,0 +1,5 @@
+[console_scripts]
+go_to_pose_node = my_robot_controller.go_to_pose:main
+set_pose_node = my_robot_controller.set_pose:main
+teste = my_robot_controller.main:main
+

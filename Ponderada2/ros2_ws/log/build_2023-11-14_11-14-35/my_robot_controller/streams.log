@@ -1,0 +1,21 @@
+[1.402s] Invoking command in '/home/felipe/Documents/GitHub/entregaveis-modulo8/Ponderada2/ros2_ws/src/my_robot_controller': PYTHONPATH=/home/felipe/Documents/GitHub/entregaveis-modulo8/Ponderada2/ros2_ws/build/my_robot_controller/prefix_override:/home/felipe/Documents/GitHub/entregaveis-modulo8/Ponderada2/ros2_ws/install/my_robot_controller/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/my_robot_controller build --build-base /home/felipe/Documents/GitHub/entregaveis-modulo8/Ponderada2/ros2_ws/build/my_robot_controller/build install --record /home/felipe/Documents/GitHub/entregaveis-modulo8/Ponderada2/ros2_ws/build/my_robot_controller/install.log --single-version-externally-managed
+[1.850s] running egg_info
+[1.851s] writing ../../build/my_robot_controller/my_robot_controller.egg-info/PKG-INFO
+[1.852s] writing dependency_links to ../../build/my_robot_controller/my_robot_controller.egg-info/dependency_links.txt
+[1.864s] writing entry points to ../../build/my_robot_controller/my_robot_controller.egg-info/entry_points.txt
+[1.864s] writing requirements to ../../build/my_robot_controller/my_robot_controller.egg-info/requires.txt
+[1.865s] writing top-level names to ../../build/my_robot_controller/my_robot_controller.egg-info/top_level.txt
+[1.869s] reading manifest file '../../build/my_robot_controller/my_robot_controller.egg-info/SOURCES.txt'
+[1.871s] writing manifest file '../../build/my_robot_controller/my_robot_controller.egg-info/SOURCES.txt'
+[1.871s] running build
+[1.871s] running build_py
+[1.872s] running install
+[1.872s] running install_lib
+[1.874s] running install_data
+[1.875s] running install_egg_info
+[1.878s] removing '/home/felipe/Documents/GitHub/entregaveis-modulo8/Ponderada2/ros2_ws/install/my_robot_controller/lib/python3.10/site-packages/my_robot_controller-0.0.0-py3.10.egg-info' (and everything under it)
+[1.879s] Copying ../../build/my_robot_controller/my_robot_controller.egg-info to /home/felipe/Documents/GitHub/entregaveis-modulo8/Ponderada2/ros2_ws/install/my_robot_controller/lib/python3.10/site-packages/my_robot_controller-0.0.0-py3.10.egg-info
+[1.880s] running install_scripts
+[1.916s] Installing ponderada script to /home/felipe/Documents/GitHub/entregaveis-modulo8/Ponderada2/ros2_ws/install/my_robot_controller/lib/my_robot_controller
+[1.916s] writing list of installed files to '/home/felipe/Documents/GitHub/entregaveis-modulo8/Ponderada2/ros2_ws/build/my_robot_controller/install.log'
+[1.971s] Invoked command in '/home/felipe/Documents/GitHub/entregaveis-modulo8/Ponderada2/ros2_ws/src/my_robot_controller' returned '0': PYTHONPATH=/home/felipe/Documents/GitHub/entregaveis-modulo8/Ponderada2/ros2_ws/build/my_robot_controller/prefix_override:/home/felipe/Documents/GitHub/entregaveis-modulo8/Ponderada2/ros2_ws/install/my_robot_controller/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/my_robot_controller build --build-base /home/felipe/Documents/GitHub/entregaveis-modulo8/Ponderada2/ros2_ws/build/my_robot_controller/build install --record /home/felipe/Documents/GitHub/entregaveis-modulo8/Ponderada2/ros2_ws/build/my_robot_controller/install.log --single-version-externally-managed
