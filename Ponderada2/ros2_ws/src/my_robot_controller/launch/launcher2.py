@@ -8,38 +8,24 @@ from launch.events import Shutdown
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 
 def generate_launch_description():
-
     mapa = IncludeLaunchDescription(
                 PythonLaunchDescriptionSource([
                     FindPackageShare("turtlebot3_navigation2"), '/launch', '/navigation2.launch.py']),
                 launch_arguments={
                     'use_sim_time':'True',
-                    'map':'mapa3.yaml'
+                    'map':'../mapa/mapa_ponderada.yaml'
                 }.items()
     )
 
-    set_pose = Node(
-        package='my_robot_controller',
-        executable='set_pose_node'
-    )
-
-    go_to_pose = Node(
-        package='my_robot_controller',
-        executable='go_to_pose_node'
+    save_map = ExecuteProcess(
+        cmd=['ros2', 'run', 'nav2_map_server', 'map_saver_cli', '-f', 'src/my_robot_controller/mapa/mapa_ponderada.yaml'],
+        output='screen',
+        shell=True
     )
 
     return LaunchDescription([
-        mapa,
-        set_pose,
-        go_to_pose,
-
-        RegisterEventHandler(
-            OnProcessExit(
-                target_action=set_pose,
-                on_exit=[
-                    go_to_pose,
-                    LogInfo('Posição Setada')
-                ]
-            )
-        )
+        save_map,
+        mapa   
     ])
+    
+    #ros2 run nav2_map_server map_saver_cli -f src/my_robot_controller/mapa/mapa_ponderada.yaml
