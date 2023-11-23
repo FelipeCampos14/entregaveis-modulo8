@@ -1,8 +1,9 @@
 # Vídeo
-<video width="320" height="240" controls>
-  <source src="video.mp4" type="video/mp4">
-  
-</video>
+
+
+https://github.com/FelipeCampos14/entregaveis-modulo8/assets/99193547/c25c532a-576a-4560-a5bc-00f1c375c37a
+
+
 
 # Explicação
 Para esta ponderada foi criado uma venv como no tutorial do autoestudo, porém em python. Consequentemente, para rodar o projeto é necessário instalar as dependências necessárias por meio do comando:
