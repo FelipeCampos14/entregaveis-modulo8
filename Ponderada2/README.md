@@ -15,13 +15,17 @@ ros2 launch turtlebot3_gazebo turtlebot3_world.launch.py
 ros2 launch turtlebot3_cartographer cartographer.launch.py use_sim_time:=True 
 ```
 
-Já o segundo launch file lança o mapa salvo pelo cartógrafo e executa os nós. Também para este se usa um pacote pai para lançar o mapa, este é:
+Já o segundo launch file salva e lança o mapa pelo cartógrafo. Também para este se usa um pacote pai para lançar o mapa, este é:
+
+```
+ros2 run nav2_map_server map_saver_cli -f src/my_robot_controller/mapa/mapa_ponderada.yaml'
+```
 
 ```
 ros2 launch turtlebot3_navigation2 navigation2.launch.py use_sim_time:=True mapa_ponderada.yaml
 ```
 
-Além disso, dois nós foram criados. O primeiro nó seta a posição inicial do robô, enquanto a segunda o envia para uma outra posição.
+Além disso, dois nós foram criados. O primeiro nó seta a posição inicial do robô, enquanto a segunda o envia para uma outra posição. Para rodá-los também foi criado um lançador, que executa os nós: set_pose_node e go_to_pose_node.
 
 ## Problema
 
