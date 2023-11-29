@@ -39,6 +39,17 @@ Devido ao problema que comentei, tive que rodar a ponderada da seguinte forma:
 
 Primeiramente há um launcher que lança o rvizz, o gazebo e o teleop do robô. Idealmente ele deveria estar integrado com os pacotes para que fosse possível rodá-lo na pasta raiz, mas como não consegui, tentei simular uma experiência pareciada colocando o path dos launchers. Portanto deve-se inicialmente estar na pasta raiz, a do workspace, neste caso o 'ros2_ws', e rodar o seguinte comando:
 
+<hr>
+
+<h3>Nota:</h3>
+Ao abrir um novo terminal no workspace, recomenda-se carregar os pacotes instalar as dependências. Isto é, deve-se realizar os comandos:
+
+```
+colcon build
+source install/local_setup.bash
+```
+
+<hr>
 ```
 ros2 launch src/my_robot_controller/launch/launcher1.py
 ```
