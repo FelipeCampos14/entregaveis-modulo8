@@ -38,21 +38,24 @@ logic_gate_dict = {
 }
 
 def main():
-    logic_gate = input("Para qual porta lógica você gostaria de treinar o perceptron? ")
-    for key, actions in logic_gate_dict.items():
-        key_re = re.compile(key)
-        if key_re.findall(logic_gate) == ["xor"]:
-            print("Xor é uma execeção, leia a documentação para entender melhor sobre este caso, percéptrons e o inverno da IA.")
-        elif key_re.findall(logic_gate):
-            y = actions
+    while True:
+        logic_gate = input("Para qual porta lógica você gostaria de treinar o perceptron? ")
+        for key, actions in logic_gate_dict.items():
+            key_re = re.compile(key)
+            if key_re.findall(logic_gate) == ["xor"]:
+                print("Xor é uma execeção, leia a documentação para entender melhor sobre este caso. \n")
+            elif key_re.findall(logic_gate):
+                y = actions
 
-            # Treinando o Perceptron
-            perceptron = Perceptron()
-            perceptron.train(X, y)
+                # Treinando o Perceptron
+                perceptron = Perceptron()
+                perceptron.train(X, y)
 
-            # Testando o Perceptron
-            for inputs in X:
-                print(f"in {inputs}, out: {perceptron.predict(inputs)}")
+                # Testando o Perceptron
+                for inputs in X:
+                    print(f"in {inputs}, out: {perceptron.predict(inputs)}")
+                print("\n")
+
 
 
 
