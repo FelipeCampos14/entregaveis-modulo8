@@ -3,8 +3,7 @@ from langchain.schema import AIMessage, HumanMessage
 import gradio as gr
 import requests
 import json
-import random
-import time
+
 
 def llm_post(prompt):
 
