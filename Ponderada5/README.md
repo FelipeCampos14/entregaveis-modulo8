@@ -4,7 +4,7 @@ Esta atividade foi entregue muito aleḿ do prazo, então deveria estar sujeita 
 
 # Vídeo 
 
-
+https://github.com/FelipeCampos14/entregaveis-modulo8/assets/99193547/1c5d2690-de2e-4b3e-961b-9293d1fb762b
 
 # Explicação
 
@@ -12,14 +12,15 @@ Para esta ponderada dei uma adaptada na interface gráfica do Gradio da ponderad
 
 Para rodar basta baixar as depedência com:
 
-´´´
+```
 pip install -r requirements.txt 
-´´´
+```
 
 Executar o código em python:
 
-´´´
+```
 python3 modelo.py
-´´´
+```
+
 
 E finalmente clicar na url dada para acessar a interface gráfica do Gradio.
