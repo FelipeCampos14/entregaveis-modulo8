@@ -2,9 +2,8 @@ import whisper
 from deep_translator import GoogleTranslator
 import re
 from gtts import gTTS 
-import pygame
-import simpleaudio as sa
 import vlc
+import time
 
 
 
@@ -12,7 +11,7 @@ def select_language():
     actions = {
         r"(portugu[êe]s|[Pp][Tt])":"pt",
         r"(ingl[êe]s|[Ee][Nn])":"en",
-        r"(japon[êe]s|[Jj][Nn])":"ja"
+        r"(japon[êe]s|[Jj][Aa])":"ja"
     }
     lan = input("Selecione uma língua de sua escolha: (pt/en/ja) \n")
     for key, value in actions.items():
@@ -32,26 +31,17 @@ def select_audio():
     return model.transcribe(audio)['text']
 
 def tts(language, mytext):
-    if language == 'ja':
-        language = 'jn'
     myobj = gTTS(text=mytext, lang=language, slow=False)
     myobj.save("out.mp3") 
-
-    # pygame.init()
-    # pygame.mixer.music.load("out.mp3")
-    # pygame.mixer.music.play()
-    # pygame.event.wait() 
-    # wave_obj = sa.WaveObject.from_wave_file("out.wav")
-
-    # # Play audio
-    # play_obj = wave_obj.play()
-    # play_obj.wait_done()
     p = vlc.MediaPlayer("out.mp3")
     p.play()
+    time.sleep(5)
+
 
 def main():
     text = select_audio()
     lan = select_language()
+    print(lan)
     translator = GoogleTranslator(source='auto', target=lan).translate(text=text)
     print(translator)
     tts(lan, translator)
